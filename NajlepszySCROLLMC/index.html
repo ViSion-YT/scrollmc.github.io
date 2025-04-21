@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ScrollMC - Serwer Minecraft inny niż wszystkie. IP: scrollmc.pl. BoxPvP, unikalne tryby i sklep premium!">
+    <meta name="keywords" content="minecraft, serwer minecraft, scrollmc, boxpvp, minecraft polska, mc server, glassmorphism, itemshop minecraft, premium minecraft">
+    <title>ScrollMC - Wejdź w Nowy Wymiar Minecrafta</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="background-blobs">
+        <div class="blob blob1"></div>
+        <div class="blob blob2"></div>
+        <div class="blob blob3"></div>
+    </div>
+
+    <div id="loader">
+        <div class="loader-shape"></div>
+    </div>
+
+    <div id="page-content" class="hidden">
+
+        <!-- ZUNIFIKOWANY NAGŁÓWEK dla index.html -->
+        <header class="main-header glass-effect">
+             <div class="container header-container">
+                <!-- Lewa strona: Logo -->
+                <div class="logo">
+                    <a href="index.html">Scroll<span class="highlight">MC</span></a>
+                </div>
+
+                <!-- Prawa strona: Grupuje Nawigację i Akcje -->
+                <div class="header-right">
+                    <nav class="main-nav">
+                        <a href="#features">Funkcje</a>
+                        <a href="#gamemodes">Tryby Gry</a>
+                        <a href="sklep.html">Sklep</a>
+                        <a href="regulamin.html">Regulamin</a>
+                    </nav>
+                    <div class="header-actions">
+                        <div class="server-ip-container">
+                             <button id="copy-ip-btn" class="ip-button glass-effect-light" aria-label="Skopiuj adres IP">
+                                <span class="ip-text" id="ip-address">scrollmc.pl</span>
+                                <i class="far fa-copy copy-icon"></i>
+                                <i class="fas fa-check copied-icon"></i>
+                             </button>
+                        </div>
+                        <button id="mobile-menu-toggle" class="mobile-menu-btn">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+             <!-- Kontener linków mobilnych -->
+            <div class="mobile-nav-links">
+                 <a href="#features">Funkcje</a>
+                 <a href="#gamemodes">Tryby Gry</a>
+                 <a href="sklep.html">Sklep</a>
+                 <a href="regulamin.html">Regulamin</a>
+                 <a href="https://vishop.pl/shop/16711" target="_blank" class="nav-shop-link mobile-shop-link">Pełny Sklep <i class="fas fa-external-link-alt fa-xs"></i></a>
+            </div>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content container">
+                    <h1 class="animate-slide-in-bottom">Scroll<span class="highlight">MC</span></h1>
+                    <p class="animate-slide-in-bottom delay-1">Zanurz się w świecie, gdzie nowoczesność spotyka klasykę. Unikalne doświadczenie czeka.</p>
+                    <div class="cta-buttons animate-slide-in-bottom delay-2">
+                        <a href="#gamemodes" class="btn btn-primary glow-on-hover"><span>Nasze Tryby</span><i class="fas fa-chevron-down"></i></a>
+                        <button class="btn btn-secondary glow-on-hover" id="copy-ip-hero-btn">
+                           <span>Skopiuj IP</span> <i class="far fa-copy"></i>
+                           <span class="copy-feedback" id="copy-feedback-hero"></span>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="container content-section">
+                 <h2 class="section-title animate-on-scroll">Co Nas <span class="highlight">Wyróżnia</span>?</h2>
+                 <div class="features-grid">
+                    <div class="feature-card glass-effect animate-on-scroll">
+                        <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+                        <h3>Optymalizacja na Maxa</h3>
+                        <p>Płynna gra bez kompromisów. Nasza infrastruktura jest gotowa na wszystko.</p>
+                    </div>
+                    <div class="feature-card glass-effect animate-on-scroll delay-1">
+                         <div class="feature-icon"><i class="fas fa-users-cog"></i></div>
+                        <h3>Administracja z Pasją</h3>
+                        <p>Jesteśmy graczami dla graczy. Zawsze gotowi do pomocy i otwarci na sugestie.</p>
+                    </div>
+                    <div class="feature-card glass-effect animate-on-scroll delay-2">
+                        <div class="feature-icon"><i class="fas fa-lightbulb"></i></div>
+                        <h3>Innowacyjne Pomysły</h3>
+                        <p>Nie kopiujemy - tworzymy. Odkryj unikalne mechaniki i eventy na ScrollMC.</p>
+                    </div>
+                 </div>
+            </section>
+
+
+            <section id="gamemodes" class="container content-section">
+                <h2 class="section-title animate-on-scroll">Dostępne <span class="highlight">Tryby Gry</span></h2>
+                <div class="gamemodes-grid">
+                    <div class="gamemode-card glass-effect animate-on-scroll">
+                         <div class="gamemode-header">
+                             <h3>BoxPvP</h3>
+                             <span class="status-badge status-online">Online</span>
+                         </div>
+                         <div class="gamemode-icon"><i class="fas fa-fist-raised"></i></div>
+                         <p>Dynamiczne starcia na arenach pełnych niespodzianek. Zdobądź najlepszy ekwipunek i pokaż skilla!</p>
+                         <a href="#join" class="btn btn-card"><span>Zagraj Teraz</span> <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="gamemode-card glass-effect animate-on-scroll delay-1">
+                        <div class="gamemode-header">
+                             <h3>Powrót Legendy</h3>
+                             <span class="status-badge status-soon">Wkrótce</span>
+                         </div>
+                         <div class="gamemode-icon"><i class="fas fa-history"></i></div>
+                         <p>Przywracamy do życia klasyczny tryb w nowej, ulepszonej odsłonie. Nostalgia i świeżość w jednym!</p>
+                         <button class="btn btn-card disabled"><span>Już Niedługo</span> <i class="fas fa-hourglass-start"></i></button>
+                    </div>
+                </div>
+            </section>
+
+             <section id="pricing" class="container content-section">
+                 <h2 class="section-title animate-on-scroll">Wesprzyj <span class="highlight">Serwer</span></h2>
+                 <p class="section-subtitle animate-on-scroll">Sprawdź naszą ofertę premium w sklepie i zyskaj dodatkowe możliwości!</p>
+                 <div class="pricing-grid">
+                     <!-- Karta VIP -->
+                     <div class="price-card glass-effect animate-on-scroll">
+                         <h4><i class="fas fa-star"></i> Ranga VIP</h4>
+                         <div class="price">15 PLN</div>
+                         <ul>
+                             <li>Specjalny prefix [VIP]</li>
+                             <li>Dostęp do /kit vip</li>
+                             <li>Rezerwacja slota</li>
+                             <li>Podstawowe komendy kosmetyczne</li>
+                         </ul>
+                         <a href="sklep.html" class="btn btn-primary glow-on-hover"><span>Zobacz w Sklepie</span></a>
+                     </div>
+                     <!-- Karta SVIP -->
+                     <div class="price-card glass-effect animate-on-scroll delay-1 popular">
+                         <span class="popular-badge">Najchętniej Wybierane</span>
+                         <h4><i class="fas fa-crown"></i> Ranga SVIP</h4>
+                         <div class="price">30 PLN</div>
+                         <ul>
+                             <li>Wszystko z VIP+</li>
+                             <li>Kolorowy prefix [SVIP]</li>
+                             <li>Ulepszony /kit svip</li>
+                             <li>Pisanie na kolorowo</li>
+                             <li>Więcej komend (/fly, /hat itp.)</li>
+                         </ul>
+                          <a href="sklep.html" class="btn btn-primary glow-on-hover"><span>Zobacz w Sklepie</span></a>
+                     </div>
+                     <!-- Karta Sponsor -->
+                     <div class="price-card glass-effect animate-on-scroll delay-2">
+                         <h4><i class="fas fa-gem"></i> Ranga Sponsor</h4>
+                         <div class="price">50 PLN</div>
+                         <ul>
+                              <li>Wszystko z SVIP+</li>
+                             <li>Animowany prefix [Sponsor]</li>
+                             <li>Najlepszy dostępny /kit</li>
+                             <li>Pełen dostęp do komend kosmetycznych</li>
+                             <li>Specjalne podziękowania</li>
+                         </ul>
+                         <a href="sklep.html" class="btn btn-primary glow-on-hover"><span>Zobacz w Sklepie</span></a>
+                     </div>
+                 </div>
+                 <div class="shop-link-bottom animate-on-scroll delay-2">
+                     <p>Zobacz szczegóły rang i inne produkty:</p>
+                      <a href="sklep.html" class="btn btn-secondary glow-on-hover"><span>Przejdź do Sklepu</span> <i class="fas fa-shopping-cart"></i></a>
+                 </div>
+             </section>
+
+            <section id="discord" class="discord-section container content-section">
+                <div class="discord-card glass-effect animate-on-scroll">
+                     <div class="discord-icon"><i class="fab fa-discord"></i></div>
+                     <h2>Dołącz do Naszej Społeczności <span class="highlight">Discord</span>!</h2>
+                     <p>Bądź na bieżąco z nowościami, bierz udział w konkursach, rozmawiaj z innymi graczami i administracją.</p>
+                     <a href="https://discord.gg/TWOJ-LINK-ZAPROSZENIA" target="_blank" class="btn btn-discord glow-on-hover">
+                         <i class="fab fa-discord"></i> <span>Dołącz Teraz</span>
+                     </a>
+                </div>
+            </section>
+
+
+            <section id="join" class="join-section container glass-effect">
+                <div class="join-content animate-on-scroll">
+                    <h2>Gotowy do <span class="highlight">Gry</span>?</h2>
+                    <p>Skopiuj adres poniżej i wkrocz do świata ScrollMC. Czekamy na Ciebie!</p>
+                    <div class="join-ip-display">
+                        <span>scrollmc.pl</span>
+                        <button id="copy-ip-join-btn" aria-label="Skopiuj adres IP">
+                            <i class="far fa-copy copy-icon"></i>
+                            <i class="fas fa-check copied-icon"></i>
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="main-footer">
+            <div class="container">
+                 <div class="footer-content">
+                     <p>© <span id="current-year"></span> ScrollMC. Wszelkie prawa zastrzeżone.</p>
+                     <p>Projekt i wykonanie: <span class="owner-name">vi$ion</span> & Wsparcie AI</p>
+                     <div class="social-links">
+                        <a href="https://discord.gg/TWOJ-LINK-ZAPROSZENIA" target="_blank" aria-label="Discord" title="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="#" aria-label="YouTube" title="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="TikTok" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                     </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
